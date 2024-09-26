@@ -100,7 +100,7 @@ const NFTForm = () => {
       formData.append('price', price);
       formData.append('image', image); // Append the file directly
   
-      const response = await axios.post('http://localhost:4000/api/nfts', formData, {
+      const response = await axios.post('https://new-nft-gules.vercel.app/api/nfts', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
