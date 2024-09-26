@@ -35,9 +35,9 @@ app.use('/api/nfts', nftRoutes);
 
 
 
-console.log('DB_URI:', process.env.DB_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
+console.log('DB_URI:', process.env.DB_URI);
 
-mongoose.connect(process.env.DB_URI)
+mongoose.connect(process.env.DB_URI,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen(process.env.PORT || 4000, () => {
       console.log('connected to the db & listening on port', process.env.PORT || 4000);
