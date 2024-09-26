@@ -1,18 +1,15 @@
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv'); // Uncomment this line
+// const dotenv = require('dotenv'); // Uncomment this line
 const mongoose = require('mongoose');
 const orderRoutes = require('./routes/orders');
 const authRoutes = require('./routes/auth');
 const nftRoutes = require('./routes/nftRoutes');
 
-dotenv.config(); // This should work now
+// dotenv.config(); // This should work now
 
 
 const app = express();
-console.log('connected1');
-console.log('port:', process.env.PORT);
-console.log('DB_URI:', process.env.DB_URI);
 
 
 app.use(cors({
@@ -36,12 +33,12 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/nfts', nftRoutes);
 
-console.log('DB_URI:', process.env.DB_URI);
 
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+
+mongoose.connect('mongodb+srv://user1:Steve_21@cluster0.9v4nncq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    app.listen(process.env.PORT || 4000, () => {
-      console.log('connected to the db & listening on port', process.env.PORT || 4000);
+    app.listen( 4000, () => {
+      console.log('connected to the db & listening on port',  4000);
     });
   })
   .catch((error) => {
