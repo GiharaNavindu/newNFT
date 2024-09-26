@@ -25,7 +25,7 @@ const Dashboard = () => {
       }
 
       try {
-        const res = await axios.get('http://localhost:4000/api/orders', {
+        const res = await axios.get('https://new-nft-gules.vercel.app/api/orders', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -53,7 +53,7 @@ const Dashboard = () => {
         return;
       }
 
-      const res = await axios.post('http://localhost:4000/api/refresh-token', { refreshToken });
+      const res = await axios.post('https://new-nft-gules.vercel.app/api/refresh-token', { refreshToken });
       localStorage.setItem('token', res.data.token);
       // Retry fetching orders after refreshing token
       fetchOrders();
