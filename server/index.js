@@ -11,6 +11,8 @@ require('dotenv').config({ path: '.env' });
 
 const app = express();
 console.log('connected1');
+console.log('DB_URI:', process.env.DB_URI);
+
 
 app.use(cors({
   // origin: ['http://localhost:5173', 'http://localhost:5174','https://new-nft-front.vercel.app'],
