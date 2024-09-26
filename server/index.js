@@ -33,7 +33,7 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/nfts', nftRoutes);
 
-mongoose.connect(process.env.DB_URI)
+mongoose.connect(process.env.DB_URI||'mongodb+srv://user1:Steve_21@cluster0.9v4nncq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
     app.listen(process.env.PORT || 4000, () => {
       console.log('connected to the db & listening on port', process.env.PORT || 4000);
