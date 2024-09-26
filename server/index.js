@@ -13,14 +13,17 @@ dotenv.config();
 require('dotenv').config({ path: '.env' });
 
 const app = express();
-console.log('connected');
+console.log('connected1');
 
 app.use(cors({
   // origin: ['http://localhost:5173', 'http://localhost:5174','https://new-nft-front.vercel.app'],
   origin: ['https://new-nft-front.vercel.app'],
+  console.log('connected2');
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+console.log('connected3');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
