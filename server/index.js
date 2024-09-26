@@ -100,7 +100,7 @@ console.log('NFT routes set up.');
 
 // Attempt to connect to the database
 console.log('Attempting to connect to the database...');
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://user1:Steve_21@cluster0.9v4nncq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen(process.env.PORT || 4000, () => {
       console.log('Connected to the DB & listening on port', process.env.PORT || 4000);
