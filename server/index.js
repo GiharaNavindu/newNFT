@@ -35,7 +35,7 @@ app.use('/api/nfts', nftRoutes);
 
 
 
-console.log('DB_URI:', process.env.DB_URI);
+console.log('DB_URI:', process.env.DB_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.connect(process.env.DB_URI)
   .then(() => {
