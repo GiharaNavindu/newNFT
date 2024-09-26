@@ -3,13 +3,14 @@
 
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const orderRoutes = require('./routes/orders');
 const authRoutes = require('./routes/auth');
 const nftRoutes = require('./routes/nftRoutes');
 
 dotenv.config();
+require('dotenv').config({ path: '.env' });
 
 const app = express();
 console.log('connected');
