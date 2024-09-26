@@ -33,6 +33,10 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/nfts', nftRoutes);
 
+
+
+console.log('DB_URI:', process.env.DB_URI);
+
 mongoose.connect(process.env.DB_URI)
   .then(() => {
     app.listen(process.env.PORT || 4000, () => {
