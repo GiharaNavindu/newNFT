@@ -66,6 +66,7 @@ const nftRoutes = require('./routes/nftRoutes');
 
 // Load environment variables
 dotenv.config();
+console.log('DB_URI:', 'mongodb+srv://user1:Steve_21@cluster0.9v4nncq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 console.log('DB_URI:', process.env.DB_URI); // Check if DB_URI is loaded
 
 const app = express();
