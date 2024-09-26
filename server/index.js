@@ -16,7 +16,7 @@ console.log('connected');
 
 app.use(cors({
   // origin: ['http://localhost:5173', 'http://localhost:5174','https://new-nft-front.vercel.app'],
-  origin: 'https://new-nft-front.vercel.app/',
+  origin: ['https://new-nft-front.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
