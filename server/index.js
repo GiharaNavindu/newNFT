@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth');
 const nftRoutes = require('./routes/nftRoutes');
 
 dotenv.config(); // This should work now
-require('dotenv').config({ path: '.env' });
+
 
 const app = express();
 console.log('connected1');
