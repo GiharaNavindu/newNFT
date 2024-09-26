@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.js"  // Fallback to index.js for all other routes
+      "dest": "/index.js"  
     }
   ]
 }
