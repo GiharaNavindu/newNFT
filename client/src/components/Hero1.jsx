@@ -181,10 +181,10 @@ const Hero1 = () => {
             className="flex-1 w-full h-[500px] md:h-[700px] mt-12 md:mt-0"
             style={{ y }}
           >
-            {/* <Spline
+            <Spline
               className="w-full h-full"
               scene="https://prod.spline.design/HyjPIznPuelf15gG/scene.splinecode"
-            /> */}
+            />
           </motion.div>
         )}
       </motion.section>
