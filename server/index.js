@@ -11,7 +11,7 @@ dotenv.config(); // This should work now
 
 const app = express();
 console.log('connected1');
-console.log('DB_URI:', process.env.PORT);
+console.log('port:', process.env.PORT);
 console.log('DB_URI:', process.env.DB_URI);
 
 
