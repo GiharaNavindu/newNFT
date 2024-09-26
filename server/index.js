@@ -16,7 +16,7 @@ console.log('connected');
 
 app.use(cors({
   // origin: ['http://localhost:5173', 'http://localhost:5174','https://new-nft-front.vercel.app'],
-  origin: 'https://new-nft-front.vercel.app',
+  origin: 'https://new-nft-front.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -33,7 +33,7 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/nfts', nftRoutes);
 
-mongoose.connect(process.env.DB_URl)
+mongoose.connect(process.env.DB_URI)
   .then(() => {
     app.listen(process.env.PORT || 4000, () => {
       console.log('connected to the db & listening on port', process.env.PORT || 4000);
