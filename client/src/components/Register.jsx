@@ -26,7 +26,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://new-nft-gules.vercel.app//api/auth/register', { username, password });
+      await axios.post('https://new-nft-gules.vercel.app/api/auth/register', { username, password });
       console.log("Registration is successful for user:", username);
       alert('User registered successfully');
       navigate('/login'); // Redirect to login page after successful registration
