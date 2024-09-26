@@ -13,7 +13,7 @@ const NFTSubmission = () => {
       const token = localStorage.getItem('token');
 
       try {
-        const res = await axios.get('http://localhost:4000/api/nfts', {
+        const res = await axios.get('https://new-nft-gules.vercel.app/api/nfts', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -39,7 +39,7 @@ const NFTSubmission = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const res = await axios.put(`http://localhost:4000/api/nfts/${updatedNft._id}`, updatedNft, {
+      const res = await axios.put(`https://new-nft-gules.vercel.app/api/nfts/${updatedNft._id}`, updatedNft, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const NFTSubmission = () => {
     const token = localStorage.getItem('token');
 
     try {
-      await axios.delete(`http://localhost:4000/api/nfts/${id}`, {
+      await axios.delete(`https://new-nft-gules.vercel.app/api/nfts/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
