@@ -8,7 +8,7 @@ const NFT = () => {
     const fetchNFTs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:4000/api/nfts', {
+        const response = await axios.get('https://new-nft-gules.vercel.app/api/nfts', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -25,7 +25,7 @@ const NFT = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:4000/api/nfts/${id}`, {
+      await axios.delete(`https://new-nft-gules.vercel.app/api/nfts/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
