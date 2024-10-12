@@ -25,7 +25,7 @@ const NFT = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`https://new-nft-gules.vercel.app/api/nfts/${id}`, {
+      await axios.delete(`https://backend-pi-wheat.vercel.app/api/nfts/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
