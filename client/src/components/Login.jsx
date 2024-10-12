@@ -17,7 +17,7 @@ const Login = ({ onLogin }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://new-nft-gules.vercel.app/api/auth/login', { username, password });
+            const response = await axios.post('https://backend-pi-wheat.vercel.app/api/auth/login', { username, password });
             const { token } = response.data;
             localStorage.setItem('token', token);
             localStorage.setItem('username', username); 
