@@ -13,7 +13,7 @@ const NFTSubmission = () => {
       const token = localStorage.getItem('token');
 
       try {
-        const res = await axios.get('https://new-nft-gules.vercel.app/api/nfts', {
+        const res = await axios.get('https://backend-pi-wheat.vercel.app/api/nfts', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
