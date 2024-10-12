@@ -27,7 +27,7 @@ function ProductCard({ img, title, price, likes, sale }) {
     console.log("Submitting bid with data:", data);
 
     try {
-      const response = await fetch("http://localhost:4000/api/orders", {
+      const response = await fetch("https://backend-pi-wheat.vercel.app/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
