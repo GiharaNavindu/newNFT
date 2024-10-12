@@ -80,7 +80,7 @@ export default function NFTCreationsPage() {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://new-nft-gules.vercel.app/api/nfts', {
+      const response = await fetch('https://backend-pi-wheat.vercel.app/api/nfts', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
