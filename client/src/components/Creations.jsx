@@ -55,7 +55,7 @@ export default function NFTCreationsPage() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://new-nft-gules.vercel.app/api/nfts', nftData, {
+      const response = await axios.post('https://backend-pi-wheat.vercel.app/api/nfts', nftData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
