@@ -8,7 +8,7 @@ const NFT = () => {
     const fetchNFTs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://new-nft-gules.vercel.app/api/nfts', {
+        const response = await axios.get('https://backend-pi-wheat.vercel.app/api/nfts', {
           headers: {
             Authorization: `Bearer ${token}`
           }
