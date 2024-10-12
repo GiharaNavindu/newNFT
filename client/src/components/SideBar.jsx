@@ -44,7 +44,7 @@ export default function Sidebar({ children }) {
         if (storedUsername) {
           setUsername(storedUsername);
         }
-        const response = await axios.get('https://new-nft-gules.vercel.app/api/users/me', {
+        const response = await axios.get('https://backend-pi-wheat.vercel.app/api/users/me', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
