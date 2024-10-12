@@ -21,7 +21,7 @@ const Orders = () => {
     const fetchOrders = async () => {
       try {
         const token = localStorage.getItem('token'); // Get token from localStorage
-        const response = await axios.get(`https://new-nft-gules.vercel.app/api/orders/username/${username}`, {
+        const response = await axios.get(`https://backend-pi-wheat.vercel.app/api/orders/username/${username}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -52,7 +52,7 @@ const Orders = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token'); // Get token from localStorage
-      await axios.delete(`https://new-nft-gules.vercel.app/api/orders/${id}`, {
+      await axios.delete(`https://backend-pi-wheat.vercel.app/api/orders/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -66,7 +66,7 @@ const Orders = () => {
   const handleEditSubmit = async (updatedOrder) => {
     try {
       const token = localStorage.getItem('token'); // Get token from localStorage
-      const response = await axios.put(`https://new-nft-gules.vercel.app/api/orders/${updatedOrder._id}`, updatedOrder, {
+      const response = await axios.put(`https://backend-pi-wheat.vercel.app/api/orders/${updatedOrder._id}`, updatedOrder, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
