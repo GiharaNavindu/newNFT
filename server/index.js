@@ -49,8 +49,6 @@
 
 
 
-
-
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -74,12 +72,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// Favicon handling
+app.get('/favicon.ico', (req, res) => res.status(204));
+
+// Root route handling
+app.get('/', (req, res) => {
+  res.send('Welcome to the API!'); // Customize this message as needed
+});
+
 app.use('/api/orders', orderRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/nfts', nftRoutes);
-
-// Favicon handling
-app.get('/favicon.ico', (req, res) => res.status(204));
 
 mongoose.connect('mongodb+srv://user1:Steve_21@cluster0.9v4nncq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
